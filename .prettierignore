@@ -1,0 +1,15 @@
+node_modules
+public
+
+.next
+.env
+
+*.log
+reports
+
+**/.env*
+
+package-lock.json
+
+prettier.config.*
+eslint.config.*

@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+	* {
+	  @apply tw-outline-offset-0 placeholder:tw-select-none focus:tw-outline-0;
+  
+	  -webkit-user-drag: none;
+	  -khtml-user-drag: none;
+	  -moz-user-drag: none;
+	  -o-user-drag: none;
+	  user-drag: none;
+	}
+  
+	body {
+	  @apply tw-bg-[#f1f8ff] tw-text-base tw-text-black tw-transition-colors tw-duration-200;
+	}
+
+	svg {
+		@apply tw-h-[20px] tw-w-[20px] tw-text-[gray];
+	}
+}
+
+@tailwind utilities;
+
+.ui-arrow {
+	@apply tw-relative before:tw-w-0 before:tw-h-0 before:tw-absolute 
+}
+
+.ui-arrow-down {
+	@apply before:tw-top-full before:tw-left-1/2 before:tw--translate-x-1/2 
+	before:tw-border-x-[6px] 
+	before:!tw-border-x-transparent
+	before:tw-border-t-[4px] 
+	
+}
+.ui-arrow-top {
+	@apply before:tw-bottom-full before:tw-left-1/2 before:tw--translate-x-1/2 
+	before:tw-border-x-[6px] 
+	before:!tw-border-x-transparent
+	before:tw-border-b-[4px]
+	
+}
+
+#sidebar .ui-accordion svg {
+	@apply tw-w-[14px] tw-h-[14px] tw-ml-[4px]
+}
+#sidebar .ui-accordion > button {
+	@apply tw-w-full tw-p-[15px] tw-text-left
+}
+
+.ui-breadcrumbs {
+	@apply tw-inline-flex tw-gap-x-[10px]
+}
+.ui-breadcrumbs > svg {
+	@apply tw-mt-[2px]
+}
+
+.ui-button {
+	@apply tw-flex tw-justify-center tw-border-2 tw-rounded-[8px] tw-border-[#00b7ff] tw-text-[#00b7ff] tw-font-semibold tw-max-w-[125px] tw-p-[5px] hover:tw-bg-[#d0e4f8] disabled:tw-bg-[white] disabled:tw-cursor-default;
+}
+
+.ui-chart {
+	@apply tw-w-[300px]
+}
+
+.ui-checkbox {
+	@apply before:tw-content-["\00A0"] before:tw-inline-block before:tw-box-border before:tw-w-[20px] before:tw-h-[20px] before:tw-bg-[white]
+	before:tw-border before:tw-border-[#B0B0B0] before:tw-rounded-[2px] before:tw-mr-[6px] before:tw-align-baseline before:tw-text-center 
+	before:tw-text-[16px] before:tw-font-bold before:tw-text-[#808080] tw-cursor-pointer
+}
+
+input[type=checkbox]:checked + .ui-checkbox {
+	@apply before:tw-content-["\2714"]  
+}
+
+.ui-example {
+	@apply tw-text-[purple] tw-font-normal tw-pl-[30px]
+}
+
+.ui-icon-primary {
+	@apply tw-w-[20px] tw-h-[20px]
+}
+
+.ui-input {
+	@apply tw-w-[200px] tw-h-[30px] tw-max-w-full;
+}
+input.ui-input,
+.ui-input:not(input) input {
+	@apply tw-border tw-border-[gray] focus:tw-border-[#222] tw-rounded-[4px] tw-bg-white tw-px-[4px] tw-py-[4px]
+}
+input.ui-input-error,
+.ui-input-error:not(input) input {
+	@apply tw-border-[red] focus:tw-border-[red];
+}
+.ui-input:not(input) {
+	@apply tw-relative;
+}
+.ui-input:not(input) input {
+	@apply tw-w-full tw-h-full
+}
+.ui-input:not(input) svg {
+	@apply tw-absolute tw-w-[16px] tw-h-[16px] tw-left-[4px] tw-top-1/2 tw--translate-y-1/2 tw-pointer-events-none tw-text-[gray]
+}
+.ui-input:not(input) svg + input {
+	@apply tw-pl-[24px]
+}
+
+.ui-message {
+	@apply tw-border tw-bg-opacity-10 tw-p-[15px] tw-rounded-[10px]  tw-flex tw-items-start tw-gap-x-[10px]
+}
+.ui-message .ui-message-body {
+	@apply tw-flex tw-flex-col tw-gap-y-[5px]
+}
+.ui-message h3 {
+	@apply tw-text-[20px]
+}
+.ui-message-error {
+	@apply tw-border-[red]  tw-bg-[#efd0d0] tw-text-[#8c0303cc]
+}
+.ui-message-error svg {
+	@apply  tw-text-[red] tw-my-[3px]
+}
+.ui-message-info {
+	@apply tw-border  tw-border-[#59b4fa]  tw-bg-[#d5effa]
+}
+.ui-message-info svg {
+	@apply  tw-text-[#0066ff] tw-my-[3px]
+}
+.ui-message-success {
+	@apply tw-border-[green]  tw-bg-[#d0efd9] tw-text-[#076a05cc]
+}
+.ui-message-success svg {
+	@apply  tw-text-[green] tw-my-[3px]
+}
+.ui-message-warning {
+	@apply tw-border-[orange]  tw-bg-[#efe1d0] tw-text-[#8c6103cc]
+}
+.ui-message-warning svg {
+	@apply  tw-text-[orange] tw-my-[3px]
+}
+
+.ui-modal {
+	@apply tw-pointer-events-auto tw-z-50 tw-max-w-full tw-overflow-hidden;
+  }
+.ui-modal-primary {
+	@apply tw-bg-white tw-rounded-[20px] tw-p-[20px]
+  }
+.ui-modal-secondary {
+	@apply tw-bg-[white] tw-rounded-[8px] tw-p-[20px] tw-border-[gray] tw-border
+  }
+
+.ui-overlay {
+	@apply tw-fixed tw-inset-0 tw-z-40 tw-overflow-y-auto;
+  }
+.ui-overlay-primary {
+	@apply tw-bg-black tw-bg-opacity-40;
+}
+
+.ui-progress {
+	@apply tw-w-full tw-overflow-hidden tw-max-w-[900px]
+}
+.ui-progress-primary {
+	@apply tw-rounded-[8px] tw-bg-[lightgray] tw-text-[white] 
+}
+.ui-progress-line {
+	@apply tw-duration-700 tw-flex  tw-justify-end tw-p-[5px]
+}
+
+.ui-radio {
+	@apply before:tw-content-["\00A0"] before:tw-inline-block before:tw-box-border before:tw-w-[20px] before:tw-h-[20px] before:tw-bg-[white]
+	before:tw-border before:tw-border-[#B0B0B0] before:tw-rounded-[16px] before:tw-mr-[6px] before:tw-align-baseline before:tw-text-center 
+	before:tw-text-[16px]  tw-cursor-pointer
+}
+
+input[type=radio]:checked + .ui-radio {
+	@apply before:tw-bg-[#59b4fa] before:tw-text-[#808080] 
+}
+
+.ui-menu {
+	@apply tw-inline-block tw-relative
+}
+.ui-menu-primary .ui-menu-button {
+	@apply ui-button;
+}
+.ui-menu-primary .ui-menu-items {
+	@apply tw-absolute tw-min-w-[200px] tw-w-full tw-max-w-full tw-left-0 tw-top-full tw-mt-[10px] tw-flex tw-flex-col tw-bg-white tw-rounded-[8px] tw-border-[gray] tw-border tw-overflow-hidden
+}
+.ui-menu-primary .ui-menu-items a {
+	@apply tw-p-[10px] hover:tw-bg-blue-500 hover:tw-text-[white]
+}
+.ui-menu-primary .ui-menu-items a.ui-menu-item-active {
+	@apply tw-bg-blue-900 tw-text-[white] hover:tw-bg-blue-900 hover:tw-text-[white] tw-cursor-default
+}
+
+.ui-pagination {
+	@apply tw-flex tw-items-center tw-gap-x-[5px]
+}
+.ui-pagination button {
+	@apply tw-p-[5px] tw-rounded-[2px] tw-border-[lightgray] tw-border
+}
+.ui-pagination button.ui-pagination-item-active {
+	@apply tw-bg-[blue] tw-border-none tw-text-white tw-cursor-default;
+}
+
+.ui-sidebar {
+	@apply tw-flex tw-flex-col tw-fixed tw-top-0 tw-bottom-0 tw-w-[300px] tw-bg-white tw-z-50 tw-transition-transform tw-duration-300
+	tw-pl-[10px] tw-divide-y tw-divide-[lightgray]
+}
+.ui-sidebar-left {
+	@apply tw-right-[100%] tw-border-r tw-border-[lightgray] 
+}
+.ui-sidebar-right {
+	@apply tw-left-[100%] tw-border-l tw-border-[lightgray] 
+}
+.ui-sidebar.ui-sidebar-left.ui-sidebar-active {
+	@apply tw-translate-x-[100%]
+}
+.ui-sidebar.ui-sidebar-right.ui-sidebar-active {
+	@apply tw--translate-x-[100%]
+}
+
+
+.ui-skeleton {
+	@apply  tw-inline-block tw-max-w-full tw-border tw-bg-[gray] tw-text-[transparent] tw-rounded-[8px] tw-animate-pulse
+}
+
+.ui-slider {
+	@apply tw-overflow-hidden tw-relative tw-select-none
+}
+.ui-slider-container {
+	@apply tw-flex  
+}
+.ui-slider-container > * {
+	@apply tw-flex-[0_0_100%] tw-min-w-0 
+}
+.ui-slider-dots {
+	@apply tw-z-[1] tw-bottom-[19px] tw-absolute tw-left-0 tw-right-0 tw-flex tw-justify-center tw-items-center
+}
+.ui-slider-dot {
+	@apply tw-w-[50px] tw-h-[50px] tw-flex tw-items-center tw-mx-[15px] after:tw-bg-[gray] after:tw-rounded after:tw-w-[100%] after:tw-h-[5px]
+	
+}
+
+/* 
+.embla__dot,
+.embla__button {
+  -webkit-appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+}
+*/
+
+.ui-span {
+	@apply tw-select-none tw-text-[green]
+}
+
+.ui-spinner {
+	@apply tw-relative before:tw-absolute before:tw-inset-0 before:tw-rounded-full before:tw-border-2 before:tw-border-[gray] after:tw-absolute after:tw-inset-0 after:tw-transform after:tw-animate-spinner after:tw-rounded-full after:tw-border-2 after:tw-border-transparent after:tw-ease-linear;
+}
+.ui-spinner-primary {
+	@apply after:tw-border-t-[#00b7ff];
+}
+
+
+
+.ui-table tr{
+	@apply tw-border tw-border-[lightgray]
+}
+
+.ui-tabs button{
+	@apply tw-w-full tw-rounded-lg  tw-p-[3px] tw-text-sm tw-font-medium  tw-ring-white tw-ring-opacity-60 tw-ring-offset-2 tw-ring-offset-blue-400 focus:tw-outline-none focus:tw-ring-2
+}
+
+.ui-tooltip {
+	@apply tw-bg-[gray]  tw-text-white tw-py-[5px] tw-px-[10px] tw-rounded-[8px] tw-max-w-[300px]
+}
+
+.ui-typography {
+	@apply tw-flex tw-flex-col tw-gap-y-[20px] tw-p-[10px] tw-max-w-[800px]
+}
+.ui-typography h1 {
+	@apply tw-font-semibold tw-text-[28px];
+}
+.ui-typography a {
+	@apply tw-text-[#00b7ff];
+}
+.ui-typography p {
+	@apply tw-font-medium;
+}
+
+
