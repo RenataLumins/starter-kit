@@ -233,6 +233,10 @@ function AppSidebar({
 				url: '/docs/js/',
 				submenu: [
 					{
+						title: 'Полезные функции',
+						url: '/docs/js/useful-functions',
+					},
+					{
 						title: 'API',
 						url: '/docs/js/api',
 					},
@@ -270,7 +274,20 @@ function AppSidebar({
 			{
 				title: 'Git',
 				url: '/docs/git/',
-				submenu: []
+				submenu: [
+					{
+						title: 'Основная информация',
+						url: '/docs/git/basic',
+					},
+					{
+						title: 'Команды',
+						url: '/docs/git/commands',
+					},
+					{
+						title: 'Gitflow',
+						url: '/docs/git/gitflow',
+					},
+				]
 			},
 			{
 				title: 'Additional',
@@ -361,7 +378,7 @@ function AppSidebar({
 											)}
 
 											{!sectionData['submenu'] && (
-												<Link href={sectionData['url']}>{sectionData['title']}</Link>
+												<Link href={sectionData['url']} className="tw-font-bold tw-p-[15px] tw-block">{sectionData['title']}</Link>
 											)}
 										</li>
 									))}

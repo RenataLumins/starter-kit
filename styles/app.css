@@ -290,6 +290,12 @@ input[type=radio]:checked + .ui-radio {
 .ui-typography h1 {
 	@apply tw-font-semibold tw-text-[28px];
 }
+.ui-typography h2 {
+	@apply tw-font-semibold tw-text-[24px];
+}
+.ui-typography h3 {
+	@apply tw-font-semibold tw-text-[20px];
+}
 .ui-typography a {
 	@apply tw-text-[#00b7ff];
 }
