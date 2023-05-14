@@ -10,7 +10,7 @@ const ModalButton = ({className = '', children, target, ...props}) => {
 	const [modal, setModal] = useAtom(ModalState)
 
 	return (
-	  <button onClick={() => setModal(target)}  className={"cursor-pointer" + className} {...props}>
+	  <button onClick={() => setModal(target)}  className={"cursor-pointer" + (className ? " " + className : "")} {...props}>
 		{children}
 	  </button>
 	)
