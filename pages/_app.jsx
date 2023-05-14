@@ -5,6 +5,7 @@ import {Provider} from 'jotai'
 import AppSidebar from '@components/_app/Sidebar'
 import Icons from '@components/_app/Icons'
 import Modals from '@components/_app/Modals'
+import Header from '@components/_app/Header'
 
 import '@styles/app.css'
 
@@ -23,7 +24,10 @@ function App({Component, pageProps}) {
       <Provider>
 	  	<Icons />
 
+		<Header />
+
         <div className="tw-relative tw-z-10 tw-flex tw-justify-stretch tw-min-h-screen tw-w-full">
+			
 			<AppSidebar className="tw-w-[360px]" />
 
           	<main className="tw-flex-grow tw-flex-shrink tw-p-[20px]">
