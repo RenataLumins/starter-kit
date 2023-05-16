@@ -10,9 +10,9 @@ function userMenu() {
 	const [user, setUser] = useAtom(UserState)
 
 	return (
-		<Menu as="div" className='ui-menu ui-menu-secondary tw-flex tw-w-full   tw-ml-[1100px]' >
+		<Menu as="div" className='ui-menu ui-menu-secondary tw-inline-flex' >
 			<Menu.Button className="tw-flex tw-w-full tw-items-center tw-h-full  tw-justify-end  hover:tw-text-[white]">{user}</Menu.Button>
-			<Menu.Items className="ui-menu-items">
+				<Menu.Items className="ui-menu-items !tw-left-auto !tw-right-0">
 					<Menu.Item disabled className='ui-menu-item-active ui-menu-item'>
 						<span> Привет, {user}! </span>
 					</Menu.Item>

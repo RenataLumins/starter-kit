@@ -2,14 +2,28 @@ import Head from 'next/head'
 
 import {Provider} from 'jotai'
 
+import { getCookies } from 'cookies-next'
+
 import AppSidebar from '@components/_app/Sidebar'
 import Icons from '@components/_app/Icons'
 import Modals from '@components/_app/Modals'
 import Header from '@components/_app/Header'
 
+import AppStatesHydration from '@components/_app/_hydration'
+
 import '@styles/app.css'
 
-function App({Component, pageProps}) {
+//Функция сработает ОДИН РАЗ при загрузке страницы
+App.getInitialProps = (context) => {
+	//Получаем куки на сервере
+	const cookies = getCookies(context?.['ctx'])
+
+	return {
+		cookies,
+	}
+}
+
+function App({Component, pageProps, cookies}) {
 	return (
 		<>
 			<Head>
@@ -22,6 +36,8 @@ function App({Component, pageProps}) {
 			</Head>
 
 			<Provider>
+				<AppStatesHydration cookies={cookies} />
+
 				<Icons />
 
 				<Header />

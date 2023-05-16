@@ -1,3 +1,3 @@
 import {atom} from 'jotai'
 
-export const UserState = atom(false)
+export const UserState = atom(null)

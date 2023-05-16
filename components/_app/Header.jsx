@@ -9,8 +9,7 @@ function Header() {
 	const [user, setUser] = useAtom(UserState)
 
 	return (
-		<header className=" tw-flex tw-h-[40px] tw-w-full tw-bg-[#b6b3b3] tw-pr-[200px]">
-
+		<header className=" tw-flex tw-justify-end tw-h-[40px] tw-w-full tw-bg-[#b6b3b3] tw-pr-[200px]">
 			{!user && (
 				<ModalButton
 					target="auth"
