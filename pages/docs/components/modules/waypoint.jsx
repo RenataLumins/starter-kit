@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from 'react'
 import {Singers as db} from '@db/singers.js'
 
 import {Spinner} from '@ui/blocks/Spinner.jsx'
@@ -29,13 +29,13 @@ function WaypointComponentsPage() {
 				future_last_singer_index = total_singers
 			}
 
-			let more_singers = (db.slice(last_loaded_singer_index, future_last_singer_index))
+			let more_singers = db.slice(last_loaded_singer_index, future_last_singer_index)
 
 			if (more_singers.length > 0) {
 				setSingers([
 					//как соединить два массива
 					...singers,
-					...more_singers
+					...more_singers,
 				])
 			}
 
@@ -50,10 +50,9 @@ function WaypointComponentsPage() {
 
 					setAllSingersLoaded(true)
 				}
-			}, 2000);
+			}, 2000)
 		}
 	}
-	
 
 	return (
 		<>
@@ -65,7 +64,7 @@ function WaypointComponentsPage() {
 				{singers.length > 0 && (
 					<>
 						{singers.map((singer, index) => (
-							<div key={index} className='tw-min-h-[60px]'>
+							<div key={index} className="tw-min-h-[60px]">
 								{index + 1}. {singer['name']}
 							</div>
 						))}
@@ -74,12 +73,13 @@ function WaypointComponentsPage() {
 							{!allSingersLoaded && (
 								<>
 									{!loading && (
-										<InView as="div" onChange={(inView, entry) => updateSingers(inView)} />
+										<InView
+											as="div"
+											onChange={(inView, entry) => updateSingers(inView)}
+										/>
 									)}
 
-									{loading && (
-										<Spinner />
-									)}
+									{loading && <Spinner />}
 								</>
 							)}
 						</>
@@ -88,6 +88,6 @@ function WaypointComponentsPage() {
 			</div>
 		</>
 	)
-  }
-  
-  export default  WaypointComponentsPage
+}
+
+export default WaypointComponentsPage

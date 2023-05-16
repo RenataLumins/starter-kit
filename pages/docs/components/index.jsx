@@ -7,11 +7,9 @@ function AllComponentsPage() {
 				<title>All components list</title>
 			</Head>
 
-			<div>
-				
-			</div>
+			<div></div>
 		</>
 	)
-  }
-  
-  export default  AllComponentsPage
+}
+
+export default AllComponentsPage

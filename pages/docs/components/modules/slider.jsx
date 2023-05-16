@@ -1,10 +1,9 @@
-
 import {Slider} from '@ui/modules/Slider.jsx'
 
 import {Blackpink} from '@db/blackpink.js'
 
 function SliderComponentsPage() {
-	const pageOptions = { loop: true }
+	const pageOptions = {loop: true}
 
 	return (
 		<>
@@ -13,10 +12,10 @@ function SliderComponentsPage() {
 
 				<p>npm install embla-carousel-react --save</p>
 
-				<Slider 
+				<Slider
 					className="tw-h-[450px] tw-w-[325px] tw-rounded-xl tw-bg-blue-900/20"
-					arrows={true} 
-					dots={true} 
+					arrows={true}
+					dots={true}
 					options={pageOptions}
 					autoplay={true}
 				>
@@ -28,13 +27,15 @@ function SliderComponentsPage() {
 							}}
 							className={'tw-bg-cover'}
 						>
-							<div className='tw-text-white tw-font-semibold tw-p-[10px] tw-mt-[15px]'>{slide['name']}</div>
+							<div className="tw-mt-[15px] tw-p-[10px] tw-font-semibold tw-text-white">
+								{slide['name']}
+							</div>
 						</div>
 					))}
 				</Slider>
 			</div>
 		</>
 	)
-  }
-  
-  export default  SliderComponentsPage
+}
+
+export default SliderComponentsPage

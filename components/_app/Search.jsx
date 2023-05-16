@@ -1,6 +1,10 @@
 function AppSearch() {
 	return (
-		<input type="search" placeholder="Search..." className="tw-border tw-border-[lightgray] tw-w-full tw-p-[5px]" />
+		<input
+			type="search"
+			placeholder="Search..."
+			className="tw-w-full tw-border tw-border-[lightgray] tw-p-[5px]"
+		/>
 	)
 }
 

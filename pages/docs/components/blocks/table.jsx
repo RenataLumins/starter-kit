@@ -8,45 +8,45 @@ function TableComponentsPage({
 			name: 'Вторая жизнь Уве',
 			author: 'Фредерик Бакман',
 			genre: 'драма, юмор',
-			date: '2012'
+			date: '2012',
 		},
 		{
 			name: 'В стране драконов',
 			author: 'Мартин Писториус',
 			genre: 'автобиография',
-			date: '2015'
+			date: '2015',
 		},
 		{
 			name: 'Полианна',
 			author: 'Элинор Портер',
 			genre: 'детская проза',
-			date: '1913'
+			date: '1913',
 		},
 		{
 			name: 'Квартира на двоих',
 			author: "Бет О'Лири",
 			genre: 'современная проза',
-			date: '2020'
+			date: '2020',
 		},
 		{
 			name: 'Зулейха открывает глаза',
 			author: 'Гузель Яхина',
 			genre: 'роман',
-			date: '2015'
+			date: '2015',
 		},
 		{
 			name: 'Чистовик',
 			author: 'Сергей Лукьяненко',
 			genre: 'фантастика',
-			date: '2007'
+			date: '2007',
 		},
 		{
 			name: 'Робинзон Крузо',
 			author: 'Даниэль Дефо',
 			genre: 'приключения',
-			date: '1719'
+			date: '1719',
 		},
-	]
+	],
 }) {
 	const [rows, setRows] = useState(books)
 	const [sort, setSort] = useState(null)
@@ -56,12 +56,12 @@ function TableComponentsPage({
 
 		switch (sortTypes[0]) {
 			case 'name':
-				return (arrayItem1[sortTypes[0]]).localeCompare(arrayItem2[sortTypes[0]])
+				return arrayItem1[sortTypes[0]].localeCompare(arrayItem2[sortTypes[0]])
 
-			default: 
+			default:
 				return arrayItem1[sortTypes[0]] - arrayItem2[sortTypes[0]]
 		}
-	};
+	}
 
 	useEffect(() => {
 		if (sort) {
@@ -69,7 +69,7 @@ function TableComponentsPage({
 
 			let sortedArray = [...books]
 
-			sortedArray.sort(sorterBooksMethod);
+			sortedArray.sort(sorterBooksMethod)
 
 			if (sortTypes[1] == 'desc') {
 				sortedArray.reverse()
@@ -88,30 +88,28 @@ function TableComponentsPage({
 			<Table
 				sort={sort}
 				setSort={setSort}
-				headers={
-					[
-						{
-							'title': 'Название',
-							'className': 'tw-text-left tw-w-[250px]',
-							'sortBy': 'name',
-							'sortDir': ['asc', 'desc'],
-						},
-						{
-							'title': 'Автор',
-							'className': 'tw-text-left'
-						},
-						{
-							'title': 'Жанр',
-							'className': 'tw-text-left'
-						},
-						{
-							'title': 'Год выпуска',
-							'className': 'tw-w-[150px]',
-							'sortBy': 'date',
-							'sortDir': ['desc', 'asc'],
-						},
-					]
-				}
+				headers={[
+					{
+						title: 'Название',
+						className: 'tw-text-left tw-w-[250px]',
+						sortBy: 'name',
+						sortDir: ['asc', 'desc'],
+					},
+					{
+						title: 'Автор',
+						className: 'tw-text-left',
+					},
+					{
+						title: 'Жанр',
+						className: 'tw-text-left',
+					},
+					{
+						title: 'Год выпуска',
+						className: 'tw-w-[150px]',
+						sortBy: 'date',
+						sortDir: ['desc', 'asc'],
+					},
+				]}
 			>
 				{Object.entries(rows).map(([key, value]) => (
 					<tr key={value['name']}>
@@ -122,12 +120,8 @@ function TableComponentsPage({
 					</tr>
 				))}
 			</Table>
-
-
-			
-
 		</div>
 	)
-  }
-  
-  export default  TableComponentsPage
+}
+
+export default TableComponentsPage

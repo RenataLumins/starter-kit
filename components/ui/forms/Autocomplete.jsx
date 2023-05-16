@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { Combobox } from '@headlessui/react'
+import {useState, useEffect} from 'react'
+import {Combobox} from '@headlessui/react'
 
 /*
 options = [
@@ -23,8 +23,7 @@ const Autocomplete = ({options = [], className = '', ...props}) => {
 	useEffect(() => {
 		if (query.length == 0) {
 			setFilteredOptions(options)
-		}
-		else {
+		} else {
 			let newOptions = options.filter((item) => {
 				return item['key'].toLowerCase().includes(query.toLowerCase())
 			})
@@ -42,36 +41,31 @@ const Autocomplete = ({options = [], className = '', ...props}) => {
 
 			if (selectedOption) {
 				setSelectedKey(selectedOption[0]['key'])
-			}
-			else {
+			} else {
 				setSelectedKey('')
 			}
 		}
 	}, [selectedValue])
 
-		 // options.filter(option => (option.toLowerCase().includes(query.toLowerCase()) ))
-
-
+	// options.filter(option => (option.toLowerCase().includes(query.toLowerCase()) ))
 
 	return (
 		<Combobox value={selectedValue} onChange={setSelectedValue}>
-			<Combobox.Input 
-				className='tw-bg-[red]'
+			<Combobox.Input
+				className="tw-bg-[red]"
 				displayValue={(item) => selectedKey}
-				onChange={(event) => setQuery(event.target.value)} />
-			
+				onChange={(event) => setQuery(event.target.value)}
+			/>
+
 			<Combobox.Options>
 				{filteredOptions.map((item, index) => (
-					<Combobox.Option 
-						key={index} 
-						value={item['value']}>
-			 				{item['key']}
+					<Combobox.Option key={index} value={item['value']}>
+						{item['key']}
 					</Combobox.Option>
-		 		))}
+				))}
 			</Combobox.Options>
-			
-	  </Combobox>
+		</Combobox>
 	)
-  }
-  
-  export {Autocomplete}
+}
+
+export {Autocomplete}

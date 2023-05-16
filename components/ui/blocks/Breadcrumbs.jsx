@@ -4,27 +4,30 @@ const Breadcrumbs = ({title = '', items, homeIcon, separatorIcon, className = ''
 	return (
 		<ul className="ui-breadcrumbs">
 			<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg">
-                <use xlinkHref={homeIcon}></use>
-            </svg>
+				<use xlinkHref={homeIcon}></use>
+			</svg>
 
 			{Object.entries(items).map(([key, value]) => (
-           		<li>
-			   		{value['url'] && (
-						<div className='tw-inline-flex tw-items-center tw-gap-x-[10px]'>
-                			<Link href={value['url']}> {value['title']} </Link>
-							<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg">
-               				 	<use xlinkHref={separatorIcon}></use>
-            				</svg>
+				<li>
+					{value['url'] && (
+						<div className="tw-inline-flex tw-items-center tw-gap-x-[10px]">
+							<Link href={value['url']}> {value['title']} </Link>
+							<svg
+								aria-hidden="true"
+								focusable="false"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<use xlinkHref={separatorIcon}></use>
+							</svg>
 						</div>
-			  		 )}
-
-					{!value['url'] && (
-						<div> {value['title']} </div>
 					)}
+
+					{!value['url'] && <div> {value['title']} </div>}
 				</li>
 			))}
-       	</ul>
+		</ul>
 	)
-  }
-  
-  export {Breadcrumbs}
+}
+
+export {Breadcrumbs}

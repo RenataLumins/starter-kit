@@ -7,12 +7,9 @@ function CalendarComponentsPage() {
 
 			<p> npm install react-calendar </p>
 
-			<CalendarComponent
-				locale="ru"
-			/>
-
+			<CalendarComponent locale="ru" />
 		</div>
 	)
-  }
-  
-  export default  CalendarComponentsPage
+}
+
+export default CalendarComponentsPage

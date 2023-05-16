@@ -8,16 +8,14 @@ function AutocompleteComponentsPage() {
 
 			<p> description </p>
 
-			<Autocomplete 
-				options={Singers.map((item, index) => (
-					{
-						'key': item['name'], 
-						'value': index
-					}
-				))}
+			<Autocomplete
+				options={Singers.map((item, index) => ({
+					key: item['name'],
+					value: index,
+				}))}
 			/>
 		</div>
 	)
-  }
-  
-  export default  AutocompleteComponentsPage
+}
+
+export default AutocompleteComponentsPage

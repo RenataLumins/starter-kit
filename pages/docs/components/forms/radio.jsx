@@ -1,5 +1,5 @@
-import { useState, Fragment } from 'react'
-import {RadioGroup } from '@ui/forms/Radio'
+import {useState, Fragment} from 'react'
+import {RadioGroup} from '@ui/forms/Radio'
 import {Icon} from '@ui/modules/Icon'
 
 import {Singers} from '@db/singers.js'
@@ -15,48 +15,58 @@ function RadioComponentsPage() {
 
 			<p>Стилизация нативных input type="radio" с помощью CSS</p>
 
-			<form  className="tw-flex tw-flex-col  ">
+			<form className="tw-flex tw-flex-col  ">
 				{Singers.map((singer) => (
 					<label key={singer['name']}>
-						<input 
+						<input
 							type="radio"
 							value={singer['name']}
-							name='singer'
+							name="singer"
 							className="tw-hidden"
 						/>
-						<span
-							className='ui-radio tw-select-none'>
-								{singer['name']}
-						</span>
+						<span className="ui-radio tw-select-none">{singer['name']}</span>
 					</label>
 				))}
-			</form>		
+			</form>
 
-			<p>Кастомный компонент Radio, с помощью которого мы можем стилизовать произвольную html-структуру как radio-кнопку</p>
-			
+			<p>
+				Кастомный компонент Radio, с помощью которого мы можем стилизовать произвольную
+				html-структуру как radio-кнопку
+			</p>
+
 			<form>
 				<RadioGroup className="tw-flex tw-flex-col tw-gap-y-[30px]">
 					<RadioGroup.Label>Choose a singer:</RadioGroup.Label>
 					{Singers.map((singer) => (
 						<RadioGroup.Option value={singer['name']}>
-							{({ checked }) => (
-								<div className={"tw-flex tw-items-center tw-justify-between tw-gap-x-[20px] tw-border tw-rounded-[8px] tw-p-[20px] " + (checked ? 'tw-border-[blue]' : 'tw-border-[gray] tw-cursor-pointer')}>
+							{({checked}) => (
+								<div
+									className={
+										'tw-flex tw-items-center tw-justify-between tw-gap-x-[20px] tw-rounded-[8px] tw-border tw-p-[20px] ' +
+										(checked
+											? 'tw-border-[blue]'
+											: 'tw-cursor-pointer tw-border-[gray]')
+									}
+								>
 									<div className="tw-flex tw-flex-col tw-gap-y-[10px]">
 										<div className="tw-text-[20px]">{singer['name']}</div>
-										<div>Country: {singer['country']}</div>	
+										<div>Country: {singer['country']}</div>
 									</div>
 
 									{checked && (
-										<Icon name="icon-circle-check" className="tw-w-[30px] tw-h-[30px] tw-text-[blue]" />
+										<Icon
+											name="icon-circle-check"
+											className="tw-h-[30px] tw-w-[30px] tw-text-[blue]"
+										/>
 									)}
 								</div>
 							)}
 						</RadioGroup.Option>
 					))}
 				</RadioGroup>
-			</form>		
+			</form>
 		</div>
 	)
-  }
-  
-  export default  RadioComponentsPage
+}
+
+export default RadioComponentsPage

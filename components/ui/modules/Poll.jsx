@@ -8,56 +8,53 @@ const Poll = ({steps = {}, currentStep = 0, submitFunction = null, className = '
 			case 'text':
 				return (
 					<>
-						{field['label'] && (
-							<label for={field['name']}>{field['label']}</label>
-						)}
-						<input type="text" name={field['name']} defaultValue={field['value']} className="ui-input"  />
+						{field['label'] && <label for={field['name']}>{field['label']}</label>}
+						<input
+							type="text"
+							name={field['name']}
+							defaultValue={field['value']}
+							className="ui-input"
+						/>
 					</>
 				)
-				break;
-	
+				break
+
 			case 'checkbox':
 				return (
 					<>
 						<input type="checkbox" name={field['name']} defaultValue={field['value']} />
-						
-						{field['label'] && (
-							<span>{field['label']}</span>
-						)}
+
+						{field['label'] && <span>{field['label']}</span>}
 					</>
 				)
-				break;
-			
+				break
+
 			case 'radio':
 				return (
 					<label>
 						<input type="radio" name={field['name']} defaultValue={field['value']} />
-						
-						{field['label'] && (
-							<span>{field['label']}</span>
-						)}
+
+						{field['label'] && <span>{field['label']}</span>}
 					</label>
 				)
-				break;
-	
+				break
+
 			case 'textarea':
 				return (
 					<>
-						{field['label'] && (
-							<label for={field['name']}>{field['label']}</label>
-						)}
+						{field['label'] && <label for={field['name']}>{field['label']}</label>}
 
 						<textarea name={field['name']}>{field['value']}</textarea>
 					</>
 				)
-	
-				break;
+
+				break
 		}
 	}
-	
+
 	const sendForm = async (event) => {
 		//Предотвращаем перезагрузку страницы из-за отправки формы (встроенное поведение форм в браузере)
-		event.preventDefault();
+		event.preventDefault()
 
 		if (submitFunction) {
 			//js get submit form data from event данные формы взять из эвента
@@ -68,40 +65,48 @@ const Poll = ({steps = {}, currentStep = 0, submitFunction = null, className = '
 	return (
 		<form onSubmit={sendForm} className="ui-poll">
 			{steps.map((step, index) => (
-				<div className={"ui-poll-step " + (index != activeStep ? 'tw-hidden' : '')}>
-					{step['title'] && (
-						<h2>{step['title']}</h2>
-					)}
+				<div className={'ui-poll-step ' + (index != activeStep ? 'tw-hidden' : '')}>
+					{step['title'] && <h2>{step['title']}</h2>}
 
-					{step['description'] && (
-						<div>{step['description']}</div>
-					)}
-					
+					{step['description'] && <div>{step['description']}</div>}
+
 					{step['answers'] && (
 						<div>
 							{step['answers'].map((field, index) => (
-								<Fragment key={index}>
-									{renderField(field)}
-								</Fragment>
+								<Fragment key={index}>{renderField(field)}</Fragment>
 							))}
 						</div>
 					)}
 
 					{index > 0 && step['buttons']['prev'] && (
-						<button type="button" className="ui-button" onClick={() => setActiveStep(index - 1)}>{step['buttons']['prev']['text']}</button>
+						<button
+							type="button"
+							className="ui-button"
+							onClick={() => setActiveStep(index - 1)}
+						>
+							{step['buttons']['prev']['text']}
+						</button>
 					)}
 
-					{index != (steps.length - 1) && step['buttons']['next'] && (
-						<button type="button" className="ui-button" onClick={() => setActiveStep(index + 1)}>{step['buttons']['next']['text']}</button>
+					{index != steps.length - 1 && step['buttons']['next'] && (
+						<button
+							type="button"
+							className="ui-button"
+							onClick={() => setActiveStep(index + 1)}
+						>
+							{step['buttons']['next']['text']}
+						</button>
 					)}
 
-					{index == (steps.length - 1) && step['buttons']['submit'] && (
-						<button type="submit" className="ui-button">{step['buttons']['submit']['text']}</button>
+					{index == steps.length - 1 && step['buttons']['submit'] && (
+						<button type="submit" className="ui-button">
+							{step['buttons']['submit']['text']}
+						</button>
 					)}
 				</div>
 			))}
 		</form>
 	)
-  }
+}
 
 export {Poll}

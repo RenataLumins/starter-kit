@@ -17,18 +17,25 @@ function Modals() {
 	return (
 		<>
 			{modal == 'global-example' && (
-				<ModalOverlay isOpen={modal == 'global-example'} setOpen={setModal} className="ui-overlay-primary">
+				<ModalOverlay
+					isOpen={modal == 'global-example'}
+					setOpen={setModal}
+					className="ui-overlay-primary"
+				>
 					<ModalGlobalExample />
 				</ModalOverlay>
 			)}
 			{modal == 'auth' && (
-				<ModalOverlay isOpen={modal == 'auth'} setOpen={setModal} className="ui-overlay-primary">
+				<ModalOverlay
+					isOpen={modal == 'auth'}
+					setOpen={setModal}
+					className="ui-overlay-primary"
+				>
 					<ModalAuth />
 				</ModalOverlay>
 			)}
 		</>
 	)
-
 }
 
 export default Modals

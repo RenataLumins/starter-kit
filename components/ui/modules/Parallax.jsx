@@ -1,1 +1,1 @@
-export {default as Parallax} from "react-plx";
+export {default as Parallax} from 'react-plx'

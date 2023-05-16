@@ -1,17 +1,18 @@
-import {toast,  Toaster } from '@ui/modules/Notifications'
+import {toast, Toaster} from '@ui/modules/Notifications'
 
 function NotificationsComponentsPage() {
-	const notify = () => toast.success('Вот уведомление.', {
-		style: {
-		  border: '1px solid green',
-		  padding: '16px',
-		  color: 'green',
-		},
-		iconTheme: {
-		  primary: 'green',
-		  secondary: 'white',
-		},
-	  });
+	const notify = () =>
+		toast.success('Вот уведомление.', {
+			style: {
+				border: '1px solid green',
+				padding: '16px',
+				color: 'green',
+			},
+			iconTheme: {
+				primary: 'green',
+				secondary: 'white',
+			},
+		})
 
 	return (
 		<div className="ui-typography">
@@ -19,16 +20,12 @@ function NotificationsComponentsPage() {
 
 			<p>npm install react-hot-toast</p>
 
-			<button 
-				className="ui-button tw-w-[500px]"
-				onClick={notify}
-			>
+			<button className="ui-button tw-w-[500px]" onClick={notify}>
 				Вызвать уведомление
 			</button>
 			<Toaster />
-			
 		</div>
 	)
-  }
-  
-  export default  NotificationsComponentsPage
+}
+
+export default NotificationsComponentsPage

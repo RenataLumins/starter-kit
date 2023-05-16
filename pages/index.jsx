@@ -7,11 +7,9 @@ function HomePage() {
 				<title>Homepage</title>
 			</Head>
 
-			<div>
-				HOMEPAGE
-			</div>
+			<div>HOMEPAGE</div>
 		</>
 	)
 }
-  
+
 export default HomePage

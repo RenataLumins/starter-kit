@@ -14,15 +14,13 @@ function TooltipComponentsPage() {
 
 				<Tooltip
 					className="ui-arrow ui-arrow-down ui-tooltip before:tw-border-[gray]"
-					content='описание'
+					content="описание"
 				>
-					<button className='ui-button'>
-						кнопочка
-					</button>
+					<button className="ui-button">кнопочка</button>
 				</Tooltip>
 			</div>
 		</>
 	)
-  }
-  
-  export default  TooltipComponentsPage
+}
+
+export default TooltipComponentsPage

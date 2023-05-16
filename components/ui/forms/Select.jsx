@@ -1,4 +1,4 @@
-import { Listbox } from '@headlessui/react'
+import {Listbox} from '@headlessui/react'
 
 import {useState, useEffect} from 'react'
 
@@ -15,8 +15,21 @@ options = [
 ]
 */
 
-const Select = ({options = [], defaultValue = null, emptyLabel = '', setValue = null, className = '', ...props}) => {
-	const [selectedValue, setSelectedValue] = useState(typeof defaultValue == 'number' ? defaultValue : (emptyLabel.length > 0 ? null : options[0]?.['value']))
+const Select = ({
+	options = [],
+	defaultValue = null,
+	emptyLabel = '',
+	setValue = null,
+	className = '',
+	...props
+}) => {
+	const [selectedValue, setSelectedValue] = useState(
+		typeof defaultValue == 'number'
+			? defaultValue
+			: emptyLabel.length > 0
+			? null
+			: options[0]?.['value']
+	)
 	const [selectedKey, setSelectedKey] = useState('')
 
 	useEffect(() => {
@@ -24,8 +37,7 @@ const Select = ({options = [], defaultValue = null, emptyLabel = '', setValue = 
 
 		if (selectedItem) {
 			setSelectedKey(selectedItem['key'])
-		}
-		else {
+		} else {
 			setSelectedKey(options[0]?.['key'])
 		}
 	}, [selectedValue])
@@ -35,7 +47,6 @@ const Select = ({options = [], defaultValue = null, emptyLabel = '', setValue = 
 			setValue(selectedValue)
 		}
 	}, [selectedValue, setValue])
-
 
 	return (
 		<Listbox onChange={setSelectedValue} {...props}>
@@ -58,16 +69,16 @@ const Select = ({options = [], defaultValue = null, emptyLabel = '', setValue = 
 				)}
 				*/}
 
-
 				{Object.keys(options).length > 0 && (
 					<>
 						{options.map((item, index) => (
-							<Listbox.Option
-								key={index}
-								value={item['value']}
-							>
+							<Listbox.Option key={index} value={item['value']}>
 								<li
-									className={(selectedValue == item['value']) ? 'tw-bg-blue-500 tw-text-white' : 'tw-bg-white tw-text-black'}
+									className={
+										selectedValue == item['value']
+											? 'tw-bg-blue-500 tw-text-white'
+											: 'tw-bg-white tw-text-black'
+									}
 								>
 									{item['key']}
 								</li>
@@ -78,6 +89,6 @@ const Select = ({options = [], defaultValue = null, emptyLabel = '', setValue = 
 			</Listbox.Options>
 		</Listbox>
 	)
-  }
-  
-  export {Select}
+}
+
+export {Select}

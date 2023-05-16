@@ -10,14 +10,10 @@ function CheckboxComponentsPage() {
 			<p> description</p>
 
 			{Singers.map((value) => (
-				<Checkbox
-					className='ui-checkbox ui-span'
-					content={value['name']}
-				/>
+				<Checkbox className="ui-checkbox ui-span" content={value['name']} />
 			))}
-
 		</div>
 	)
-  }
-  
-  export default  CheckboxComponentsPage
+}
+
+export default CheckboxComponentsPage

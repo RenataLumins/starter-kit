@@ -7,10 +7,9 @@ function SpinnerComponentsPage() {
 
 			<p> Компонент Spinner создан чисто с помощью CSS.</p>
 
-			<Spinner/>
-
+			<Spinner />
 		</div>
 	)
-  }
-  
-  export default  SpinnerComponentsPage
+}
+
+export default SpinnerComponentsPage

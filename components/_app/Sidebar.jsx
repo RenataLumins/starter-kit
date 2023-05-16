@@ -20,7 +20,7 @@ function AppSidebar({
 						title: 'Memo',
 						url: '/docs/react/memo',
 					},
-				]
+				],
 			},
 			{
 				title: 'Components',
@@ -164,7 +164,7 @@ function AppSidebar({
 							},
 						],
 					},
-				]
+				],
 			},
 			{
 				title: 'Hooks',
@@ -178,7 +178,7 @@ function AppSidebar({
 						title: 'useDebounce',
 						url: '/docs/hooks/usedebounce',
 					},
-				]
+				],
 			},
 			{
 				title: 'Next.js',
@@ -204,7 +204,7 @@ function AppSidebar({
 						title: 'middleware',
 						url: '/docs/next.js/middleware',
 					},
-				]
+				],
 			},
 			{
 				title: 'Packages',
@@ -226,7 +226,7 @@ function AppSidebar({
 						title: 'Sentry',
 						url: '/docs/packages/sentry',
 					},
-				]
+				],
 			},
 			{
 				title: 'JS',
@@ -264,12 +264,12 @@ function AppSidebar({
 						title: 'Typescript',
 						url: '/docs/js/typescript',
 					},
-				]
+				],
 			},
 			{
 				title: 'CSS',
 				url: '/docs/css/',
-				submenu: []
+				submenu: [],
 			},
 			{
 				title: 'Git',
@@ -287,7 +287,7 @@ function AppSidebar({
 						title: 'Gitflow',
 						url: '/docs/git/gitflow',
 					},
-				]
+				],
 			},
 			{
 				title: 'Additional',
@@ -305,7 +305,7 @@ function AppSidebar({
 						title: 'docker',
 						url: '/docs/additional/docker',
 					},
-				]
+				],
 			},
 		],
 		[
@@ -321,64 +321,134 @@ function AppSidebar({
 						title: 'bundlephobia',
 						url: '/docs/useful/bundlephobia',
 					},
-				]
+				],
 			},
 		],
 		[
 			{
 				title: 'Examples',
 				url: '/docs/examples/',
-				submenu: []
+				submenu: [],
 			},
 		],
 	],
-	className = '', 
+	className = '',
 	...props
 }) {
 	const router = useRouter()
 
 	return (
-		<aside id="sidebar" className={'tw-relative tw-flex tw-flex-col tw-divide-y tw-divide-[lightgray] tw-border-r tw-border-[lightgray] ' + className} {...props}>
+		<aside
+			id="sidebar"
+			className={
+				'tw-relative tw-flex tw-flex-col tw-divide-y tw-divide-[lightgray] tw-border-r tw-border-[lightgray] ' +
+				className
+			}
+			{...props}
+		>
 			<div className="tw-p-[15px]">
-				<AppSearch /> 
+				<AppSearch />
 			</div>
-			<div className="tw-flex-grow tw-flex-shrink tw-relative">
+			<div className="tw-relative tw-flex-shrink tw-flex-grow">
 				<nav className="tw-absolute tw-inset-0 tw-overflow-y-auto">
 					<ul className="tw-flex tw-flex-col tw-divide-y tw-divide-[lightgray]">
 						{menu.map((folder, index) => (
 							<li key={index}>
-								<ul >
+								<ul>
 									{folder.map((sectionData) => (
-										<li key={sectionData['url']} >
+										<li key={sectionData['url']}>
 											{sectionData['submenu'] && (
-												<Accordion title={sectionData['title']} className="ui-accordion-primary tw-font-bold">
-													<ul className='tw-flex tw-flex-col tw-font-normal tw-px-[15px]'>
-														{sectionData['submenu'].map((categoryData) => (
-															<li key={categoryData['url']} >
-																{categoryData['submenu'] && (
-																	<>
-																		<h3 className='tw-font-medium '>{categoryData['title']}</h3>
-																		<ul className="tw-mb-[15px]">
-																			{categoryData['submenu'].map((linkData) => (
-																				<li key={linkData['url']}>
-																					<Link href={linkData['url']} className={"hover:tw-text-[#00b7ff] " + (linkData['url'] == router.asPath ? ' tw-font-medium tw-text-[#00b7ff] tw-cursor-default' : '')}>- {linkData['title']}</Link>
-																				</li>
-																			))}
-																		</ul>
-																	</>
-																)}
+												<Accordion
+													title={sectionData['title']}
+													className="ui-accordion-primary tw-font-bold"
+												>
+													<ul className="tw-flex tw-flex-col tw-px-[15px] tw-font-normal">
+														{sectionData['submenu'].map(
+															(categoryData) => (
+																<li key={categoryData['url']}>
+																	{categoryData['submenu'] && (
+																		<>
+																			<h3 className="tw-font-medium ">
+																				{
+																					categoryData[
+																						'title'
+																					]
+																				}
+																			</h3>
+																			<ul className="tw-mb-[15px]">
+																				{categoryData[
+																					'submenu'
+																				].map(
+																					(linkData) => (
+																						<li
+																							key={
+																								linkData[
+																									'url'
+																								]
+																							}
+																						>
+																							<Link
+																								href={
+																									linkData[
+																										'url'
+																									]
+																								}
+																								className={
+																									'hover:tw-text-[#00b7ff] ' +
+																									(linkData[
+																										'url'
+																									] ==
+																									router.asPath
+																										? ' tw-cursor-default tw-font-medium tw-text-[#00b7ff]'
+																										: '')
+																								}
+																							>
+																								-{' '}
+																								{
+																									linkData[
+																										'title'
+																									]
+																								}
+																							</Link>
+																						</li>
+																					)
+																				)}
+																			</ul>
+																		</>
+																	)}
 
-																{!categoryData['submenu'] && (
-																	<Link href={categoryData['url']} className={"hover:tw-text-[#00b7ff] " + (categoryData['url'] == router.asPath ? ' tw-font-medium tw-text-[#00b7ff] tw-cursor-default' : '')}>- {categoryData['title']}</Link>
-																)}
-															</li>
-														))}
+																	{!categoryData['submenu'] && (
+																		<Link
+																			href={
+																				categoryData['url']
+																			}
+																			className={
+																				'hover:tw-text-[#00b7ff] ' +
+																				(categoryData[
+																					'url'
+																				] == router.asPath
+																					? ' tw-cursor-default tw-font-medium tw-text-[#00b7ff]'
+																					: '')
+																			}
+																		>
+																			-{' '}
+																			{categoryData['title']}
+																		</Link>
+																	)}
+																</li>
+															)
+														)}
 													</ul>
 												</Accordion>
 											)}
 
 											{!sectionData['submenu'] && (
-												<Link href={sectionData['url']} className="tw-font-bold tw-p-[15px] tw-block">{sectionData['title']}</Link>
+												<Link
+													href={sectionData['url']}
+													className="tw-block tw-p-[15px] tw-font-bold"
+												>
+													{sectionData['title']}
+												</Link>
 											)}
 										</li>
 									))}

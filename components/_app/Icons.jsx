@@ -19,19 +19,31 @@ function Icons() {
 					fill="currentColor"
 				></path>
 			</symbol>
-			<symbol id="icon-angle-right-light" viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg">
+			<symbol
+				id="icon-angle-right-light"
+				viewBox="0 0 256 512"
+				xmlns="http://www.w3.org/2000/svg"
+			>
 				<path
 					d="M219.9 266.7L75.89 426.7c-5.906 6.562-16.03 7.094-22.59 1.188c-6.918-6.271-6.783-16.39-1.188-22.62L186.5 256L52.11 106.7C46.23 100.1 46.75 90.04 53.29 84.1C59.86 78.2 69.98 78.73 75.89 85.29l144 159.1C225.4 251.4 225.4 260.6 219.9 266.7z"
 					fill="currentColor"
 				></path>
 			</symbol>
-			<symbol id="icon-circle-exlamation" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+			<symbol
+				id="icon-circle-exlamation"
+				viewBox="0 0 512 512"
+				xmlns="http://www.w3.org/2000/svg"
+			>
 				<path
 					d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 464c-114.7 0-208-93.31-208-208S141.3 48 256 48s208 93.31 208 208S370.7 464 256 464zM256 304c13.25 0 24-10.75 24-24v-128C280 138.8 269.3 128 256 128S232 138.8 232 152v128C232 293.3 242.8 304 256 304zM256 337.1c-17.36 0-31.44 14.08-31.44 31.44C224.6 385.9 238.6 400 256 400s31.44-14.08 31.44-31.44C287.4 351.2 273.4 337.1 256 337.1z"
 					fill="currentColor"
 				></path>
 			</symbol>
-			<symbol id="icon-triangle-exlamation" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+			<symbol
+				id="icon-triangle-exlamation"
+				viewBox="0 0 512 512"
+				xmlns="http://www.w3.org/2000/svg"
+			>
 				<path
 					d="M506.3 417l-213.3-364C284.8 39 270.4 32 256 32C241.6 32 227.2 39 218.1 53l-213.2 364C-10.59 444.9 9.851 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM52.58 432L255.1 84.8L459.4 432H52.58zM256 337.1c-17.36 0-31.44 14.08-31.44 31.44c0 17.36 14.11 31.44 31.48 31.44s31.4-14.08 31.4-31.44C287.4 351.2 273.4 337.1 256 337.1zM232 184v96C232 293.3 242.8 304 256 304s24-10.75 24-24v-96C280 170.8 269.3 160 256 160S232 170.8 232 184z"
 					fill="currentColor"

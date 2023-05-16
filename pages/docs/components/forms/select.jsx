@@ -1,8 +1,7 @@
-import { useState } from 'react'
+import {useState} from 'react'
 
 import {Select} from '@ui/forms/Select'
 import {Singers} from '@db/singers.js'
-
 
 function SelectComponentsPage() {
 	const [selectedSinger, setSelectedSinger] = useState(null)
@@ -14,22 +13,23 @@ function SelectComponentsPage() {
 			<p> description</p>
 
 			{typeof selectedSinger == 'number' && (
-				<p>Selected singer country: {Singers[selectedSinger]?.['country'] || 'We dont know'}</p>
+				<p>
+					Selected singer country:{' '}
+					{Singers[selectedSinger]?.['country'] || 'We dont know'}
+				</p>
 			)}
 
 			<Select
 				defaultValue={selectedSinger}
 				emptyLabel="Choose singers from list"
 				setValue={setSelectedSinger}
-				options={Singers.map((item, index) => (
-					{
-						'key': item['name'], 
-						'value': index
-					}
-				))}
+				options={Singers.map((item, index) => ({
+					key: item['name'],
+					value: index,
+				}))}
 			/>
 		</div>
 	)
-  }
-  
-  export default  SelectComponentsPage
+}
+
+export default SelectComponentsPage

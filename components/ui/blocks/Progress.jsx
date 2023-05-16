@@ -5,7 +5,7 @@ const Progress = ({progressLineStyle = {}, percentage = 0, className = '', ...pr
 
 	useEffect(() => {
 		let progressLineStyleCopy = {}
-		progressLineStyleCopy = JSON.parse(JSON.stringify(progressLineStyle));
+		progressLineStyleCopy = JSON.parse(JSON.stringify(progressLineStyle))
 
 		progressLineStyleCopy['width'] = percentage + '%'
 
@@ -13,12 +13,12 @@ const Progress = ({progressLineStyle = {}, percentage = 0, className = '', ...pr
 	}, [progressLineStyle, percentage])
 
 	return (
-		<div className={"ui-progress " + className} {...props}>
+		<div className={'ui-progress ' + className} {...props}>
 			<div className="ui-progress-line" style={mergedStyles}>
 				{percentage}%
 			</div>
 		</div>
 	)
-  }
-  
-  export {Progress}
+}
+
+export {Progress}

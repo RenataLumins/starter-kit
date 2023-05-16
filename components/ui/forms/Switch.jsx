@@ -1,1 +1,1 @@
-export { Switch } from '@headlessui/react'
+export {Switch} from '@headlessui/react'

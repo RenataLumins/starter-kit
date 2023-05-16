@@ -1,4 +1,4 @@
-const ExampleCategoryItem = ({ className = '', ...props}) => {
+const ExampleCategoryItem = ({className = '', ...props}) => {
 	return (
 		<div className="tw-flex tw-flex-col tw-gap-y-[20px] tw-p-[10px]">
 			<div className="tw-flex tw-items-center tw-justify-between tw-gap-x-[10px]">

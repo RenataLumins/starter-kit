@@ -1,14 +1,20 @@
-
 const Input = ({type = 'text', name, label = '', icon = '', className = '', ...props}) => {
 	return (
-		<div className=''>
+		<div className="">
 			{label && (
-				<label htmlFor={name} className="ui-label">{label}</label>
+				<label htmlFor={name} className="ui-label">
+					{label}
+				</label>
 			)}
 
 			<div className={'ui-input ' + className}>
 				{icon && (
-					<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg">
+					<svg
+						aria-hidden="true"
+						focusable="false"
+						role="img"
+						xmlns="http://www.w3.org/2000/svg"
+					>
 						<use xlinkHref={icon} />
 					</svg>
 				)}
@@ -17,6 +23,6 @@ const Input = ({type = 'text', name, label = '', icon = '', className = '', ...p
 			</div>
 		</div>
 	)
-  }
-  
-  export {Input}
+}
+
+export {Input}
