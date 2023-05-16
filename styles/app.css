@@ -176,7 +176,7 @@ input[type='radio']:checked + .ui-radio {
 }
 
 .ui-menu {
-	@apply tw-relative tw-inline-block;
+	@apply tw-relative tw-inline-block tw-z-[99];
 }
 .ui-menu-primary .ui-menu-button {
 	@apply ui-button;
@@ -189,6 +189,19 @@ input[type='radio']:checked + .ui-radio {
 }
 .ui-menu-primary .ui-menu-items a.ui-menu-item-active {
 	@apply tw-cursor-default tw-bg-blue-900 tw-text-[white] hover:tw-bg-blue-900 hover:tw-text-[white];
+}
+
+.ui-menu-secondary .ui-menu-items {
+	@apply tw-absolute tw-left-0 tw-top-full tw-mt-[10px] tw-flex tw-w-full tw-min-w-[200px] tw-max-w-full tw-flex-col tw-overflow-hidden tw-rounded-[8px] tw-border tw-border-[gray] tw-bg-white;
+}
+.ui-menu-secondary .ui-menu-items a, .ui-subbutton {
+	@apply  hover:tw-bg-blue-500 hover:tw-text-[white];
+}
+.ui-menu-secondary .ui-menu-items span.ui-menu-item-active {
+	@apply tw-cursor-default tw-bg-blue-900 tw-text-[white] hover:tw-bg-blue-900 hover:tw-text-[white];
+}
+.ui-menu-item {
+	@apply tw-p-[10px] tw-justify-start tw-flex
 }
 
 .ui-pagination {
