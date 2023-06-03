@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import {Timer} from '@ui/blocks/Timer'
+
 function HomePage() {
 	return (
 		<>
@@ -7,7 +9,10 @@ function HomePage() {
 				<title>Homepage</title>
 			</Head>
 
-			<div>HOMEPAGE</div>
+			<div className="ui-typography">
+				<h1>HOMEPAGE</h1>
+				<Timer />
+			</div>
 		</>
 	)
 }
