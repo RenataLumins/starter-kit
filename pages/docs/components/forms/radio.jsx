@@ -13,7 +13,7 @@ function RadioComponentsPage() {
 
 			<p>Описание, что такое радио</p>
 
-			<p>Стилизация нативных input type="radio" с помощью CSS</p>
+			<p>Стилизация нативных input type=&quot;radio&quot; с помощью CSS</p>
 
 			<form className="tw-flex tw-flex-col  ">
 				{Singers.map((singer) => (
@@ -37,8 +37,8 @@ function RadioComponentsPage() {
 			<form>
 				<RadioGroup className="tw-flex tw-flex-col tw-gap-y-[30px]">
 					<RadioGroup.Label>Choose a singer:</RadioGroup.Label>
-					{Singers.map((singer) => (
-						<RadioGroup.Option value={singer['name']}>
+					{Singers.map((singer, index) => (
+						<RadioGroup.Option key={index} value={singer['name']}>
 							{({checked}) => (
 								<div
 									className={

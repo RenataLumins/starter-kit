@@ -7,8 +7,8 @@ const Breadcrumbs = ({title = '', items, homeIcon, separatorIcon, className = ''
 				<use xlinkHref={homeIcon}></use>
 			</svg>
 
-			{Object.entries(items).map(([key, value]) => (
-				<li>
+			{Object.entries(items).map(([key, value], index) => (
+				<li key={index}>
 					{value['url'] && (
 						<div className="tw-inline-flex tw-items-center tw-gap-x-[10px]">
 							<Link href={value['url']}> {value['title']} </Link>

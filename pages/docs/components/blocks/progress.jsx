@@ -20,13 +20,13 @@ function ProgressComponentsPage() {
 
 			<p>
 				{' '}
-				В компоненте Progress задаю переменные "progressLineStyle" (для style, где выводим
-				цвет полоски) и "percentage". По умолчанию "progressLineStyle" является пустым
-				массивом, а "percentage" равен нулю
+				В компоненте Progress задаю переменные &quot;progressLineStyle&quot; (для style, где выводим
+				цвет полоски) и &quot;percentage&quot;. По умолчанию &quot;progressLineStyle&quot; является пустым
+				массивом, а &quot;percentage&quot; равен нулю
 			</p>
 			<p>
-				Далее нам нужно соединить эти переменные так, чтобы в "progressLineStyle" появился
-				ключ width со значением "percentage". Дeлаем это с помощью useEffect и особой
+				Далее нам нужно соединить эти переменные так, чтобы в &quot;progressLineStyle&quot; появился
+				ключ width со значением &quot;percentage&quot;. Дeлаем это с помощью useEffect и особой
 				функции, которая клонирует ассоциативные массивы: arrayCopy =
 				JSON.parse(JSON.stringify(array)).
 			</p>

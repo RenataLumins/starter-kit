@@ -324,13 +324,6 @@ function AppSidebar({
 				],
 			},
 		],
-		[
-			{
-				title: 'Examples',
-				url: '/docs/examples/',
-				submenu: [],
-			},
-		],
 	],
 	className = '',
 	...props
@@ -349,7 +342,7 @@ function AppSidebar({
 			<div className="tw-p-[15px]">
 				<AppSearch />
 			</div>
-			<div className="tw-relative tw-flex-shrink tw-flex-grow">
+			<div className="tw-relative tw-flex-shrink tw-flex-grow tw-select-none">
 				<nav className="tw-absolute tw-inset-0 tw-overflow-y-auto">
 					<ul className="tw-flex tw-flex-col tw-divide-y tw-divide-[lightgray]">
 						{menu.map((folder, index) => (

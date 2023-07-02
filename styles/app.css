@@ -1,5 +1,16 @@
+@import 'fonts';
+
 @tailwind base;
 @tailwind components;
+
+:root {
+	--color-primary: #00b7ff;
+	--color-secondary: #dedcff;
+	--color-tertiary: #ebeaf4;
+	
+	--color-positive: #2ea83a;
+	--color-negative: #f94444;
+}
 
 @layer base {
 	* {
@@ -13,7 +24,7 @@
 	}
 
 	body {
-		@apply tw-bg-[#f1f8ff] tw-text-base tw-text-black tw-transition-colors tw-duration-200;
+		@apply tw-bg-[#f1f8ff] dark:tw-bg-[#212121] tw-text-base tw-text-black dark:tw-text-[#F5F5F5] tw-transition-colors tw-duration-200;
 	}
 
 	svg {

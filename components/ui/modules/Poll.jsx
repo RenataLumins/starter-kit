@@ -65,7 +65,7 @@ const Poll = ({steps = {}, currentStep = 0, submitFunction = null, className = '
 	return (
 		<form onSubmit={sendForm} className="ui-poll">
 			{steps.map((step, index) => (
-				<div className={'ui-poll-step ' + (index != activeStep ? 'tw-hidden' : '')}>
+				<div key={index} className={'ui-poll-step ' + (index != activeStep ? 'tw-hidden' : '')}>
 					{step['title'] && <h2>{step['title']}</h2>}
 
 					{step['description'] && <div>{step['description']}</div>}

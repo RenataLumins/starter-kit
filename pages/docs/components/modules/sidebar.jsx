@@ -18,8 +18,8 @@ function SidebarComponentsPage() {
 			</div>
 
 			<SidebarOverlay id="example-sidebar" title="POP-IDOLS">
-				{Singers.map((singer) => (
-					<div className="tw-cursor-pointer hover:tw-text-[#59b4fa]">
+				{Singers.map((singer, index) => (
+					<div key={index} className="tw-cursor-pointer hover:tw-text-[#59b4fa]">
 						{singer['name']}
 					</div>
 				))}

@@ -6,12 +6,12 @@ import {UserState} from '@states/user'
 
 import { deleteCookie } from 'cookies-next'
 
-function userMenu() {
+function UserMenu() {
 	const [user, setUser] = useAtom(UserState)
 
 	return (
 		<Menu as="div" className='ui-menu ui-menu-secondary tw-inline-flex' >
-			<Menu.Button className="tw-flex tw-w-full tw-items-center tw-h-full  tw-justify-end  hover:tw-text-[white]">{user}</Menu.Button>
+			<Menu.Button className="tw-flex tw-w-full tw-items-center tw-h-full  tw-justify-end  hover:tw-text-[#00b7ff]">{user}</Menu.Button>
 				<Menu.Items className="ui-menu-items !tw-left-auto !tw-right-0">
 					<Menu.Item disabled className='ui-menu-item-active ui-menu-item'>
 						<span> Привет, {user}! </span>
@@ -40,4 +40,4 @@ function userMenu() {
 
 }
 
-export default userMenu
+export default UserMenu

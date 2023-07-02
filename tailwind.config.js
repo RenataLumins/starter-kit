@@ -8,6 +8,16 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			colors: {
+				primary: 'var(--color-primary)',
+				secondary: 'var(--color-secondary)',
+				tertiary: 'var(--color-tertiary)',
+				positive: 'var(--color-positive)',
+				negative: 'var(--color-negative)',
+			},
+			fontFamily: {
+				'pacifico': ['Pacifico'],
+			},
 			animation: {
 				spinner: 'spinner 1.5s linear infinite',
 			},

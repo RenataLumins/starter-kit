@@ -1,4 +1,4 @@
-import {toast, Toaster} from '@ui/modules/Notifications'
+import {toast} from '@ui/modules/Notifications'
 
 function NotificationsComponentsPage() {
 	const notify = () =>
@@ -7,6 +7,7 @@ function NotificationsComponentsPage() {
 				border: '1px solid green',
 				padding: '16px',
 				color: 'green',
+				zIndex: 9999,
 			},
 			iconTheme: {
 				primary: 'green',
@@ -23,7 +24,6 @@ function NotificationsComponentsPage() {
 			<button className="ui-button tw-w-[500px]" onClick={notify}>
 				Вызвать уведомление
 			</button>
-			<Toaster />
 		</div>
 	)
 }

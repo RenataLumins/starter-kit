@@ -9,8 +9,8 @@ function CheckboxComponentsPage() {
 
 			<p> description</p>
 
-			{Singers.map((value) => (
-				<Checkbox className="ui-checkbox ui-span" content={value['name']} />
+			{Singers.map((value, index) => (
+				<Checkbox key={index} className="ui-checkbox ui-span" content={value['name']} />
 			))}
 		</div>
 	)

@@ -77,6 +77,7 @@ const Slider = ({
 				<div className="ui-slider-dots">
 					{scrollSnaps.map((_, index) => (
 						<button
+							key={index}
 							className={'ui-slider-dot'.concat(
 								index === selectedIndex
 									? ' after:tw-bg-gradient-to-r after:tw-from-violet-500 after:tw-to-fuchsia-500'

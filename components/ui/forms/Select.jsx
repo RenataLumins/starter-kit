@@ -40,7 +40,7 @@ const Select = ({
 		} else {
 			setSelectedKey(options[0]?.['key'])
 		}
-	}, [selectedValue])
+	}, [selectedValue, options])
 
 	useEffect(() => {
 		if (setValue) {

@@ -20,8 +20,8 @@ function AccordionComponentPage({
 		<div className="ui-typography">
 			<h1>Accordion (Disclosure)</h1>
 
-			{Object.entries(accordion).map(([key, value]) => (
-				<Accordion title={value['button']}>{value['answer']}</Accordion>
+			{Object.entries(accordion).map(([key, value], index) => (
+				<Accordion key={index} title={value['button']}>{value['answer']}</Accordion>
 			))}
 
 			<p>

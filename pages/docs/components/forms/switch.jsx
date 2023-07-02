@@ -1,14 +1,16 @@
 import {useState} from 'react'
-import {Switch} from '@ui/forms/Switch'
+import {Switch} from '@headlessui/react'
+import {Toggle} from '@ui/forms/Toggle'
+
 
 function SwitchComponentsPage() {
 	const [enabled, setEnabled] = useState(false)
 
 	return (
 		<div className="ui-typography">
-			<h1>Switch</h1>
+			<h1>Switch (Toggle)</h1>
 
-			<p>HeadlessUI component.</p>
+			<p>HeadlessUI компонент:</p>
 
 			<Switch.Group>
 				<div className="tw-flex tw-items-center">
@@ -29,6 +31,10 @@ function SwitchComponentsPage() {
 					</Switch>
 				</div>
 			</Switch.Group>
+
+			<p>Кастомный компонент:</p>
+
+			<Toggle />
 		</div>
 	)
 }

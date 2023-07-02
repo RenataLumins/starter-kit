@@ -11,13 +11,13 @@ function ChartComponentsPage() {
 
 			<p>
 				{' '}
-				Устанавливаются 2 библиотеки: "npm i react-chartjs-2 chart.js". И действуем по
+				Устанавливаются 2 библиотеки: &quot;npm i react-chartjs-2 chart.js&quot;. И действуем по
 				документации{' '}
 				<a href="https://www.npmjs.com/package/react-chartjs-2"> react-chartjs-2 </a>.
 			</p>
 
 			<div className="ui-chart">
-				<div> Пример графика "Pie":</div>
+				<div> Пример графика &quot;Pie&quot;:</div>
 				<Chart
 					type="pie"
 					data={{
