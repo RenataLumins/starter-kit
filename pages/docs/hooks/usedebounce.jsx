@@ -1,6 +1,23 @@
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
+
 function UseDebounceHooksPage() {
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Hooks',
+						slug: '/docs/hooks',
+					},
+					{
+						title: 'useDebounce',
+					},
+				]}
+			/>
 			<h1>Хук useDebounce</h1>
 
 			<p>

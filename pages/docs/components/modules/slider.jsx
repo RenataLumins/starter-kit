@@ -1,6 +1,7 @@
 import {Slider} from '@ui/modules/Slider.jsx'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
-import {Blackpink} from '@db/blackpink.js'
+import {Blackpink} from '@db/blackpink.ts'
 
 function SliderComponentsPage() {
 	const pageOptions = {loop: true}
@@ -8,6 +9,21 @@ function SliderComponentsPage() {
 	return (
 		<>
 			<div className="ui-typography">
+				<Breadcrumbs
+					items={[
+						{
+							title: 'Homepage',
+							slug: '/',
+						},
+						{
+							title: 'Modules',
+							slug: '/docs/components/modules',
+						},
+						{
+							title: 'Slider',
+						},
+					]}
+				/>
 				<h1>Slider</h1>
 
 				<p>npm install embla-carousel-react --save</p>

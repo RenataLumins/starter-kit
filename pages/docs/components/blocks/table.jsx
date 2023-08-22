@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 
 import {Table} from '@ui/blocks/Table.jsx'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function TableComponentsPage({
 	books = [
@@ -81,6 +82,22 @@ function TableComponentsPage({
 
 	return (
 		<div className="ui-typography">
+
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Blocks',
+						slug: '/docs/components/blocks',
+					},
+					{
+						title: 'Table',
+					},
+				]}
+			/>
 			<h1>Table</h1>
 
 			<p>description</p>

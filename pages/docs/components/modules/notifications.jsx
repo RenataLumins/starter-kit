@@ -1,4 +1,5 @@
 import {toast} from '@ui/modules/Notifications'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function NotificationsComponentsPage() {
 	const notify = () =>
@@ -17,6 +18,21 @@ function NotificationsComponentsPage() {
 
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Modules',
+						slug: '/docs/components/modules',
+					},
+					{
+						title: 'Notifications',
+					},
+				]}
+			/>
 			<h1>Notifications</h1>
 
 			<p>npm install react-hot-toast</p>

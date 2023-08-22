@@ -1,8 +1,24 @@
 import {Popover} from '@ui/modules/Dropdown'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function DropdownComponentsPage() {
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Modules',
+						slug: '/docs/components/modules',
+					},
+					{
+						title: 'Dropdown',
+					},
+				]}
+			/>
 			<h1>Dropdown (Popover)</h1>
 
 			<p>HeadlessUi Popover component.</p>

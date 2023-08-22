@@ -1,8 +1,24 @@
 import {Mask} from '@ui/forms/Mask'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function MaskComponentsPage() {
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Forms',
+						slug: '/docs/components/forms',
+					},
+					{
+						title: 'Mask',
+					},
+				]}
+			/>
 			<h1>Mask</h1>
 
 			<p> Компонент react-input-mask-next</p>

@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
+
 function CommandsGitPage() {
 	return (
 		<>
@@ -8,6 +10,21 @@ function CommandsGitPage() {
 			</Head>
 
 			<div className="ui-typography">
+				<Breadcrumbs
+					items={[
+						{
+							title: 'Homepage',
+							slug: '/',
+						},
+						{
+							title: 'Git',
+							slug: '/docs/git',
+						},
+						{
+							title: 'Commands',
+						},
+					]}
+				/>
 				<h1>Основные команды и термины</h1>
 
 				<p>

@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 const Chart = dynamic(() => import('@ui/blocks/Chart.jsx'), {
 	ssr: false,
@@ -7,6 +8,23 @@ const Chart = dynamic(() => import('@ui/blocks/Chart.jsx'), {
 function ChartComponentsPage() {
 	return (
 		<div className="ui-typography">
+
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Blocks',
+						slug: '/docs/components/blocks',
+					},
+					{
+						title: 'Chart',
+					},
+				]}
+			/>
+
 			<h1>Chart</h1>
 
 			<p>
@@ -17,6 +35,9 @@ function ChartComponentsPage() {
 			</p>
 
 			<div className="ui-chart">
+
+				
+
 				<div> Пример графика &quot;Pie&quot;:</div>
 				<Chart
 					type="pie"

@@ -2,7 +2,9 @@ import {useAtom} from 'jotai'
 import {SidebarState} from '@states/sidebar'
 import {SidebarOverlay, SidebarButton} from '@ui/modules/Sidebar.jsx'
 
-import {Singers} from '@db/singers.js'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
+
+import {Singers} from '@db/singers.ts'
 
 function SidebarComponentsPage() {
 	const [sidebar, setSidebar] = useAtom(SidebarState)
@@ -10,6 +12,21 @@ function SidebarComponentsPage() {
 	return (
 		<>
 			<div className="ui-typography">
+				<Breadcrumbs
+					items={[
+						{
+							title: 'Homepage',
+							slug: '/',
+						},
+						{
+							title: 'Modules',
+							slug: '/docs/components/modules',
+						},
+						{
+							title: 'Sidebar',
+						},
+					]}
+				/>
 				<h1>Sidebar</h1>
 
 				<p>description</p>

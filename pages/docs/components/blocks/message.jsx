@@ -1,8 +1,26 @@
 import {Message} from '@ui/blocks/Message.jsx'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function MessageComponentsPage() {
 	return (
 		<div className="ui-typography">
+
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Blocks',
+						slug: '/docs/components/blocks',
+					},
+					{
+						title: 'Message',
+					},
+				]}
+			/>
+
 			<h1>Message (alert)</h1>
 
 			<Message

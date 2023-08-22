@@ -1,6 +1,6 @@
 import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
-function AllModulesComponentsPage() {
+function AllJSPage() {
 	return(
 		<div className="ui-typography">
 			<Breadcrumbs
@@ -10,13 +10,13 @@ function AllModulesComponentsPage() {
 						slug: '/',
 					},
 					{
-						title: 'Modules',
+						title: 'JS',
 					},
 				]}
 			/>
-			<h1>all components</h1>
+			<h1>all JS</h1>
 		</div>
 	) 
 }
 
-export default AllModulesComponentsPage
+export default AllJSPage

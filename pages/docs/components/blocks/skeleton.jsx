@@ -1,9 +1,27 @@
 import {ExampleCategoryItem} from '@components/exampleCategory/ExampleCategoryItem'
 import {ExampleCategoryItemPlaceholder} from '@components/exampleCategory/ExampleCategoryItemPlaceholder'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function SkeletonComponentsPage() {
 	return (
 		<div className="ui-typography">
+
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Blocks',
+						slug: '/docs/components/blocks',
+					},
+					{
+						title: 'Skeleton',
+					},
+				]}
+			/>
+
 			<h1>Skeleton</h1>
 
 			<p>

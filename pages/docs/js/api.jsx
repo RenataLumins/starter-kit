@@ -5,6 +5,9 @@ import {getBerries} from '@actions/pokeapi/berries'
 import {Table} from '@ui/blocks/Table.jsx'
 import {toast} from '@ui/modules/Notifications'
 
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
+
+
 function ApiJSPage() {
 	const [berries, setBerries] = useState([])
 	const [loading, setLoading] = useState(false)
@@ -36,6 +39,21 @@ function ApiJSPage() {
 
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'JS',
+						slug: '/docs/js',
+					},
+					{
+						title: 'API',
+					},
+				]}
+			/>
 			<h1>API</h1>
 
 			<h3>Что такое async</h3>

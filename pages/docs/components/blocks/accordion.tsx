@@ -1,7 +1,17 @@
 import {Accordion} from '@ui/blocks/Accordion.jsx'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
+
+interface AccordionProps {
+	array: AccordionPanel[],
+}
+
+interface AccordionPanel {
+	button: string,
+	answer: string
+}
 
 function AccordionComponentPage({
-	accordion = [
+	array = [
 		{
 			button: 'Кнопка 1',
 			answer: 'Ответ 1',
@@ -15,13 +25,30 @@ function AccordionComponentPage({
 			answer: 'Ответ 3',
 		},
 	],
-}) {
+}: AccordionProps) {
 	return (
 		<div className="ui-typography">
+
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Blocks',
+						slug: '/docs/components/blocks',
+					},
+					{
+						title: 'Accordion',
+					},
+				]}
+			/>
+
 			<h1>Accordion (Disclosure)</h1>
 
-			{Object.entries(accordion).map(([key, value], index) => (
-				<Accordion key={index} title={value['button']}>{value['answer']}</Accordion>
+			{array.map((item, index) => (
+				<Accordion key={index} title={item['button']} >{item['answer']}</Accordion>
 			))}
 
 			<p>

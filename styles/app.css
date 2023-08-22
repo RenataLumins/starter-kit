@@ -3,6 +3,7 @@
 @tailwind base;
 @tailwind components;
 
+
 :root {
 	--color-primary: #00b7ff;
 	--color-secondary: #dedcff;
@@ -32,7 +33,7 @@
 	}
 }
 
-@tailwind utilities;
+
 
 .ui-arrow {
 	@apply tw-relative before:tw-absolute before:tw-h-0 before:tw-w-0;
@@ -58,6 +59,10 @@
 	@apply tw-w-full tw-p-[15px] tw-text-left;
 }
 
+.ui-accordion-primary:hover > button > .ui-accordion-title {
+	@apply tw-text-[gray];
+}
+
 .ui-breadcrumbs {
 	@apply tw-inline-flex tw-gap-x-[10px];
 }
@@ -66,7 +71,8 @@
 }
 
 .ui-button {
-	@apply tw-flex tw-max-w-[125px] tw-justify-center tw-rounded-[8px] tw-border-2 tw-border-[#00b7ff] tw-p-[5px] tw-font-semibold tw-text-[#00b7ff] hover:tw-bg-[#d0e4f8] disabled:tw-cursor-default disabled:tw-bg-[white];
+	@apply tw-flex tw-max-w-[125px] tw-justify-center tw-rounded-[8px] tw-border-2 tw-border-primary tw-p-[5px] tw-font-semibold
+	 tw-text-primary hover:tw-bg-[#d0e4f8] disabled:tw-cursor-default disabled:tw-bg-[white];
 }
 
 .ui-chart {
@@ -85,6 +91,11 @@ input[type='checkbox']:checked + .ui-checkbox {
 
 .ui-example {
 	@apply tw-pl-[30px] tw-font-normal tw-text-[purple];
+}
+
+.ui-header {
+	@apply tw-flex tw-justify-between tw-h-[40px] tw-w-full tw-bg-[white] dark:tw-bg-[#424242] dark:tw-text-black xl:tw-pr-[200px] 
+	xl:tw-pl-[200px] tw-p-0 tw-z-[99] tw-fixed tw-shadow
 }
 
 .ui-icon-primary {
@@ -320,3 +331,5 @@ input[type='radio']:checked + .ui-radio {
 .ui-typography p {
 	@apply tw-font-medium;
 }
+
+@tailwind utilities;

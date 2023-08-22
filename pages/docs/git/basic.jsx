@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
+
 function BasicGitPage() {
 	return (
 		<>
@@ -8,6 +10,21 @@ function BasicGitPage() {
 			</Head>
 
 			<div className="ui-typography">
+				<Breadcrumbs
+					items={[
+						{
+							title: 'Homepage',
+							slug: '/',
+						},
+						{
+							title: 'Git',
+							slug: '/docs/git',
+						},
+						{
+							title: 'Basic',
+						},
+					]}
+				/>
 				<h1>Git</h1>
 
 				<p>

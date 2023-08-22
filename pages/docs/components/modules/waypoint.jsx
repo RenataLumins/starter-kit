@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react'
-import {Singers as db} from '@db/singers.js'
+import {Singers as db} from '@db/singers.ts'
 
 import {Spinner} from '@ui/blocks/Spinner.jsx'
 import {InView} from '@ui/modules/Waypoint.jsx'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function WaypointComponentsPage() {
 	const [singers, setSingers] = useState([])
@@ -57,6 +58,21 @@ function WaypointComponentsPage() {
 	return (
 		<>
 			<div className="ui-typography">
+				<Breadcrumbs
+					items={[
+						{
+							title: 'Homepage',
+							slug: '/',
+						},
+						{
+							title: 'Modules',
+							slug: '/docs/components/modules',
+						},
+						{
+							title: 'Waypoint',
+						},
+					]}
+				/>
 				<h1>Waypoint</h1>
 
 				<p>description.</p>

@@ -334,7 +334,7 @@ function AppSidebar({
 		<aside
 			id="sidebar"
 			className={
-				'tw-relative tw-flex tw-flex-col tw-divide-y tw-divide-[lightgray] tw-border-r tw-border-[lightgray] ' +
+				'tw-relative tw-flex tw-flex-col tw-divide-y tw-divide-[lightgray] dark:tw-divide-[gray] tw-border-r tw-border-[lightgray] dark:tw-border-[gray] ' +
 				className
 			}
 			{...props}
@@ -342,9 +342,10 @@ function AppSidebar({
 			<div className="tw-p-[15px]">
 				<AppSearch />
 			</div>
+
 			<div className="tw-relative tw-flex-shrink tw-flex-grow tw-select-none">
 				<nav className="tw-absolute tw-inset-0 tw-overflow-y-auto">
-					<ul className="tw-flex tw-flex-col tw-divide-y tw-divide-[lightgray]">
+					<ul className="tw-flex tw-flex-col tw-divide-y tw-divide-[lightgray] dark:tw-divide-[gray]">
 						{menu.map((folder, index) => (
 							<li key={index}>
 								<ul>
@@ -387,12 +388,12 @@ function AppSidebar({
 																									]
 																								}
 																								className={
-																									'hover:tw-text-[#00b7ff] ' +
+																									'hover:tw-text-primary ' +
 																									(linkData[
 																										'url'
 																									] ==
 																									router.asPath
-																										? ' tw-cursor-default tw-font-medium tw-text-[#00b7ff]'
+																										? ' tw-cursor-default tw-font-medium tw-text-primary'
 																										: '')
 																								}
 																							>
@@ -416,11 +417,11 @@ function AppSidebar({
 																				categoryData['url']
 																			}
 																			className={
-																				'hover:tw-text-[#00b7ff] ' +
+																				'hover:tw-text-primary ' +
 																				(categoryData[
 																					'url'
 																				] == router.asPath
-																					? ' tw-cursor-default tw-font-medium tw-text-[#00b7ff]'
+																					? ' tw-cursor-default tw-font-medium tw-text-primary'
 																					: '')
 																			}
 																		>

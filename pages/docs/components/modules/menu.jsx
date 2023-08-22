@@ -1,4 +1,5 @@
 import {MenuComponent} from '@ui/modules/Menu'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function MenuComponentsPage() {
 	let links = [
@@ -26,6 +27,21 @@ function MenuComponentsPage() {
 
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Modules',
+						slug: '/docs/components/modules',
+					},
+					{
+						title: 'Menu',
+					},
+				]}
+			/>
 			<h1>Menu</h1>
 
 			<p>HeadlessUi Menu component.</p>

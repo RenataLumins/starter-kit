@@ -1,14 +1,30 @@
 import {useState, Fragment} from 'react'
 import {RadioGroup} from '@ui/forms/Radio'
 import {Icon} from '@ui/modules/Icon'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
-import {Singers} from '@db/singers.js'
+import {Singers} from '@db/singers.ts'
 
 function RadioComponentsPage() {
 	let [selected, setSelected] = useState()
 
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Forms',
+						slug: '/docs/components/forms',
+					},
+					{
+						title: 'Radio',
+					},
+				]}
+			/>
 			<h1>Radio</h1>
 
 			<p>Описание, что такое радио</p>

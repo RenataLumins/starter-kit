@@ -1,29 +1,40 @@
 import Link from 'next/link'
 
-const Breadcrumbs = ({title = '', items, homeIcon, separatorIcon, className = '', ...props}) => {
+interface Props {
+	items?: {
+		title?: string
+		slug?: string
+	}[]
+	className?: string
+	showed?: number
+	exclude?: []
+	iconMore?: string
+}
+
+const Breadcrumbs = ({ items, className = '', ...props} : Props) => {
 	return (
 		<ul className="ui-breadcrumbs">
 			<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg">
-				<use xlinkHref={homeIcon}></use>
+				<use xlinkHref="#icon-house"></use>
 			</svg>
 
 			{Object.entries(items).map(([key, value], index) => (
 				<li key={index}>
-					{value['url'] && (
+					{value['slug'] && (
 						<div className="tw-inline-flex tw-items-center tw-gap-x-[10px]">
-							<Link href={value['url']}> {value['title']} </Link>
+							<Link href={value['slug']}> {value['title']} </Link>
 							<svg
 								aria-hidden="true"
 								focusable="false"
 								role="img"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<use xlinkHref={separatorIcon}></use>
+								<use xlinkHref="#icon-angle-right-light"></use>
 							</svg>
 						</div>
 					)}
 
-					{!value['url'] && <div> {value['title']} </div>}
+					{!value['slug'] && <div> {value['title']} </div>}
 				</li>
 			))}
 		</ul>

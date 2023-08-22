@@ -1,6 +1,7 @@
 import {useState} from 'react'
 
 import {Poll} from '@ui/modules/Poll'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function PollComponentsPage() {
 	const [formSend, setFormSend] = useState(false)
@@ -66,6 +67,21 @@ function PollComponentsPage() {
 
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Modules',
+						slug: '/docs/components/modules',
+					},
+					{
+						title: 'Poll',
+					},
+				]}
+			/>
 			<h1>Poll</h1>
 
 			<p>description</p>

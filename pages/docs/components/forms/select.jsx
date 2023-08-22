@@ -1,13 +1,30 @@
 import {useState} from 'react'
 
 import {Select} from '@ui/forms/Select'
-import {Singers} from '@db/singers.js'
+import {Singers} from '@db/singers.ts'
+
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function SelectComponentsPage() {
 	const [selectedSinger, setSelectedSinger] = useState(null)
 
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Forms',
+						slug: '/docs/components/forms',
+					},
+					{
+						title: 'Select',
+					},
+				]}
+			/>
 			<h1>Select</h1>
 
 			<p> description</p>

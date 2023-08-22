@@ -21,7 +21,6 @@ function Header() {
 	}, [])
 
 	const toggleTheme = (newTheme = '') => {
-		setIsToggled(isToggled => isToggled == "value1" ? "value2" : "value1")
 
 		switch (theme) {
 			case 'dark':
@@ -47,18 +46,9 @@ function Header() {
 	}
 
 	return (
-		<header className=" tw-flex tw-justify-between tw-h-[40px] tw-w-full tw-bg-[white] dark:tw-bg-[#424242] dark:tw-text-black tw-pr-[200px] tw-pl-[200px] tw-z-[99] tw-fixed tw-shadow">
-			<Link href='/' className='tw-flex tw-items-center tw-flex-shrink-0 tw-gap-[5px]'>
-				{ (theme == "light") ?
-					<img src="/images/lightpet.jpg" className="tw-h-full" />
-					: <img src="/images/darkpet.jpg" className="tw-h-full" />
-				}
-				<div className="tw-font-pacifico">test</div>
-
-				<Icon
-					name="icon-paw-light"
-					className="tw-h-[25px] tw-w-[25px] tw-text-primary"
-				/>
+		<header className="ui-header">
+			<Link href='/' className='tw-flex tw-items-center tw-flex-shrink-0 tw-font-pacifico tw-text-primary tw-text-[32px]'>
+				Starter-kit
 			</Link>
 
 			<div className='tw-flex tw-w-full tw-items-center tw-justify-end tw-gap-[20px]'>

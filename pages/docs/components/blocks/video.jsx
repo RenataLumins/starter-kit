@@ -1,8 +1,25 @@
 import {Video} from '@ui/blocks/Video'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function VideoComponentsPage() {
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Blocks',
+						slug: '/docs/components/blocks',
+					},
+					{
+						title: 'Video',
+					},
+				]}
+			/>
+
 			<h1>Video</h1>
 
 			<p>

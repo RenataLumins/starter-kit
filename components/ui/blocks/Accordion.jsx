@@ -10,19 +10,17 @@ const Accordion = ({title = '', children, className = '', ...props}) => {
 		>
 			{({open}) => (
 				<>
-					<Disclosure.Button>
-						<div className="tw-flex tw-w-full tw-items-center">
-							<div>{title}</div>
-							<svg
-								aria-hidden="true"
-								focusable="false"
-								role="img"
-								xmlns="http://www.w3.org/2000/svg"
-								className={open ? ' tw-rotate-180' : ''}
-							>
-								<use xlinkHref={'#icon-chevron-down'}></use>
-							</svg>
-						</div>
+					<Disclosure.Button className=" tw-group tw-flex tw-w-full tw-items-center tw-gap-x-[6px]">
+						<div className="ui-accordion-title">{title}</div>
+						<svg
+							aria-hidden="true"
+							focusable="false"
+							role="img"
+							xmlns="http://www.w3.org/2000/svg"
+							className={"tw-flex-grow-0 tw-flex-shrink-0 tw-transition-opacity tw-duration-200" + (open ? ' tw-rotate-180' : ' tw-opacity-0 group-hover:tw-opacity-100')}
+						>
+							<use xlinkHref={'#icon-chevron-down'}></use>
+						</svg>
 					</Disclosure.Button>
 					<Disclosure.Panel>{children}</Disclosure.Panel>
 				</>

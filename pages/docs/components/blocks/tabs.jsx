@@ -2,6 +2,8 @@ import {Tab} from '@ui/blocks/Tabs.jsx'
 
 import {useState} from 'react'
 
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
+
 function TabsComponentPage({
 	tabs = [
 		{
@@ -22,6 +24,22 @@ function TabsComponentPage({
 
 	return (
 		<div className="ui-typography">
+
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Blocks',
+						slug: '/docs/components/blocks',
+					},
+					{
+						title: 'Tabs',
+					},
+				]}
+			/>
 			<h1>Tabs</h1>
 
 			<div className="ui-tabs tw-w-full tw-max-w-[300px] ">

@@ -1,4 +1,4 @@
-import {Breadcrumbs} from '@ui/blocks/Breadcrumbs.jsx'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs.tsx'
 
 function BreadcrumbsComponentsPage() {
 	return (
@@ -6,16 +6,14 @@ function BreadcrumbsComponentsPage() {
 			<h1>Breadcrumbs</h1>
 
 			<Breadcrumbs
-				homeIcon="#icon-house"
-				separatorIcon="#icon-angle-right-light"
 				items={[
 					{
 						title: 'Homepage',
-						url: '/',
+						slug: '/',
 					},
 					{
 						title: 'Blocks',
-						url: '/docs/components/blocks',
+						slug: '/docs/components/blocks',
 					},
 					{
 						title: 'Breadcrumbs',
@@ -25,7 +23,7 @@ function BreadcrumbsComponentsPage() {
 
 			<p>
 				Создала отдельно компонент Breadcrumbs.jsx, где задала необходимые переменные
-				(иконки, и массив с title и url).
+				(иконки, и массив с title и slug).
 				<br /> В коде компонента прохожусь по циклу, чтобы вывести нужные данные.{' '}
 			</p>
 		</div>

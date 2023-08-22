@@ -1,4 +1,10 @@
-export const Singers = [
+interface SingersType {
+	country?: string;
+	name: string;
+	unavailable?: boolean
+}
+
+export const Singers: SingersType[] = [
 	{country: 'Barbados', name: 'Rihanna', unavailable: false},
 	{country: 'USA', name: 'Arianna Grande', unavailable: false},
 	{country: 'Albania', name: 'Rita Ora', unavailable: false},

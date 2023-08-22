@@ -1,5 +1,7 @@
 import dynamic from 'next/dynamic'
 
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
+
 const Parallax = dynamic(() => import('@ui/modules/Parallax').then((module) => module.Parallax))
 
 function ParallaxComponentsPage() {
@@ -50,6 +52,21 @@ function ParallaxComponentsPage() {
 
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Modules',
+						slug: '/docs/components/modules',
+					},
+					{
+						title: 'Parallax',
+					},
+				]}
+			/>
 			<h1>Parallax</h1>
 
 			<p>npm install --save react-plx</p>

@@ -1,6 +1,7 @@
 import {useState} from 'react'
 
 import {Input} from '@ui/forms/Input'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function InputComponentsPage() {
 	const [loading, setLoading] = useState(false)
@@ -21,6 +22,21 @@ function InputComponentsPage() {
 
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Forms',
+						slug: '/docs/components/forms',
+					},
+					{
+						title: 'Input',
+					},
+				]}
+			/>
 			<h1>Input</h1>
 
 			<p> description</p>

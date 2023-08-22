@@ -3,6 +3,8 @@ import {useState} from 'react'
 
 import {ModalButton, ModalOverlay} from '@ui/modules/Modal'
 
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
+
 const ModalLocalExample = dynamic(() => import('@components/_app/modals/LocalExample'), {
 	ssr: false,
 })
@@ -13,6 +15,21 @@ function ModalComponentsPage() {
 	return (
 		<>
 			<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Modules',
+						slug: '/docs/components/modules',
+					},
+					{
+						title: 'Modal',
+					},
+				]}
+			/>
 				<h1>Modal</h1>
 
 				<p>Описание</p>

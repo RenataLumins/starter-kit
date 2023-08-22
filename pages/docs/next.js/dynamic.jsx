@@ -1,6 +1,23 @@
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
+
 function DynamicImportNextJSPage() {
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Next JS',
+						slug: '/docs/next.js',
+					},
+					{
+						title: 'Dynamic Import',
+					},
+				]}
+			/>
 			<h1>Dynamic Import (Lazy)</h1>
 
 			<p>

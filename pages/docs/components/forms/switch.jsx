@@ -2,12 +2,28 @@ import {useState} from 'react'
 import {Switch} from '@headlessui/react'
 import {Toggle} from '@ui/forms/Toggle'
 
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function SwitchComponentsPage() {
 	const [enabled, setEnabled] = useState(false)
 
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Forms',
+						slug: '/docs/components/forms',
+					},
+					{
+						title: 'Switch',
+					},
+				]}
+			/>
 			<h1>Switch (Toggle)</h1>
 
 			<p>HeadlessUI компонент:</p>

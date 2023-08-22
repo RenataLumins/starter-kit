@@ -1,8 +1,9 @@
 import {useState} from 'react'
 
 import {Pagination} from '@ui/modules/Pagination'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
-import {Singers} from '@db/singers.js'
+import {Singers} from '@db/singers.ts'
 
 function PaginationComponentsPage() {
 	const [currentPage, setCurrentPage] = useState(1)
@@ -10,6 +11,21 @@ function PaginationComponentsPage() {
 
 	return (
 		<div className="ui-typography">
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Modules',
+						slug: '/docs/components/modules',
+					},
+					{
+						title: 'Pagination',
+					},
+				]}
+			/>
 			<h1>Pagination</h1>
 			<p>description</p>
 			<table className="ui-table tw-w-full">

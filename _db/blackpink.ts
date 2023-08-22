@@ -1,4 +1,10 @@
-export const Blackpink = [
+interface BlackpinkType {
+	name: string;
+	photo: string
+}
+
+
+export const Blackpink: BlackpinkType[] = [
 	{
 		name: 'Дженни',
 		photo: '/images/jennie.jpg',

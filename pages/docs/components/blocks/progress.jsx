@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import {Progress} from '@ui/blocks/Progress.jsx'
+import {Breadcrumbs} from '@ui/blocks/Breadcrumbs'
 
 function ProgressComponentsPage() {
 	const [progressPercentage, setProgressPercentage] = useState(20)
@@ -16,6 +17,22 @@ function ProgressComponentsPage() {
 
 	return (
 		<div className="ui-typography">
+
+			<Breadcrumbs
+				items={[
+					{
+						title: 'Homepage',
+						slug: '/',
+					},
+					{
+						title: 'Blocks',
+						slug: '/docs/components/blocks',
+					},
+					{
+						title: 'Progress',
+					},
+				]}
+			/>
 			<h1>Progress</h1>
 
 			<p>
