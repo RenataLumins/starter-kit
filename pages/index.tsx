@@ -63,7 +63,7 @@ function HomePage() {
 			<div className="ui-typography">
 				<h1>Welcome to the Starter-kit!</h1>
 				<Timer />
-				<p> also Some text for a test! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Some text for a test!Some text for a test!Some text for a test!Some text for a test!</p>
+				<p> also also Some text for a test! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Some text for a test!Some text for a test!Some text for a test!Some text for a test!</p>
 			
 				
 			</div>
